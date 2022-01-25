@@ -1,0 +1,131 @@
+.about-container {
+  position: relative;
+}
+.about-section {
+  background-color: $section-bg-color;
+  padding-top: 125px;
+  padding-bottom: 39px;
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    padding-bottom: 66px;
+  }
+  @include for-desktop {
+    background-position: bottom -20px right;
+  }
+  background-image: url(../images/mobile/cow-bg-mob-min.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom 95px right;
+  @media screen and (max-width: 767px) {
+    background-image: url(../images/mobile/cow-bg-mob-min.png);
+  }
+  @media screen and (min-width: 480px) and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/mobile/cow-bg2x-mob-min.png);
+  }
+  @media screen and (min-width: 1200px) {
+    background-image: url(../images/desctop/cow-bg-desct-min.png);
+  }
+
+  @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/desctop/cow-bg2x-desct-min.png);
+  }
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    background-image: none;
+  }
+
+  &__image-cow {
+    @include for-tablet {
+      flex-basis: calc((100% - 20px) / 2);
+    }
+  }
+  &__content-box {
+    @include for-tablet {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__up-text_mb {
+    margin-bottom: 15px;
+  }
+  &__title_mb {
+    margin-bottom: 25px;
+    @include for-tablet {
+      margin-bottom: 50px;
+    }
+  }
+  &__subtext {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.62;
+    color: $main-text-color;
+    &_size_margin {
+      margin-bottom: 47px;
+    }
+    &_mb {
+      margin-bottom: 10px;
+    }
+    @include for-tablet {
+      font-size: 14px;
+      line-height: 1.76;
+    }
+    @include for-desktop {
+      font-size: 16px;
+      letter-spacing: 0.04em;
+    }
+  }
+  &__suptext {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.62;
+    color: $secondary-text-color;
+    @include for-tablet {
+      font-size: 14px;
+      line-height: 1.76;
+      letter-spacing: 0.04em;
+    }
+    @include for-desktop {
+      line-height: 1.94;
+    }
+  }
+  &__text-box {
+    margin-top: 50px;
+    margin-bottom: 17px;
+    @media screen and (max-width: 767px) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    @include for-tablet {
+      flex-basis: calc((100% - 20px) / 2);
+    }
+    @include for-desktop {
+      padding-left: 54px;
+    }
+  }
+  &__button-box {
+    width: 176px;
+    height: 44px;
+    @media screen and (max-width: 767px) {
+      margin-left: 40px;
+    }
+    @include for-tablet {
+      margin-left: 360px;
+      margin-top: 56px;
+    }
+    @include for-desktop {
+      position: absolute;
+      right: 300px;
+      bottom: 107px;
+      margin: 0;
+    }
+  }
+  &__button-arrow {
+    stroke: $accent-color;
+    width: 7px;
+    height: 11px;
+    margin-left: 12px;
+  }
+}

@@ -1,0 +1,51 @@
+.section-title {
+font-family: 'Titan One', cursive;
+font-size: 34px;
+line-height: 1.14;
+text-align: center;
+letter-spacing: 0.04em;
+text-transform: uppercase;
+
+color: #D41443;
+
+@include for-tablet {
+    font-size: 48px;
+  }
+
+@include for-desktop {
+    font-size: 58px;
+    letter-spacing: 0.06em;
+  }
+
+&_locate_footer {
+    text-align: justify;
+}  
+
+&__up-text {
+font-family: 'Titan One', cursive;
+font-size: 18px;
+line-height: 1.16;
+text-align: center;
+text-transform: uppercase;
+
+color: #FFA5BA;
+
+@include for-tablet {
+    font-size: 26px;
+  }
+
+@include for-desktop {
+    font-size: 30px;
+    line-height: 1.14;
+    letter-spacing: 0.04em;
+  }
+
+  &_locate_footer {
+    text-align: justify;
+}
+
+}
+
+
+}
+

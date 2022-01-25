@@ -1,0 +1,198 @@
+.hero-title {
+  width: 225px;
+  margin-bottom: 19px;
+
+  font-family: Titan One;
+  font-size: 26px;
+  line-height: 1.15;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: $main-light-color;
+
+  &__passion {
+    font-family: Titan One;
+    font-size: 48px;
+    line-height: 0.97;
+    text-transform: uppercase;
+
+    color: $accent-color;
+  }
+
+  @include for-tablet {
+    width: 162px;
+    height: 80px;
+
+    font-size: 22px;
+    line-height: 1.14;
+
+    &__passion {
+      font-size: 34px;
+      line-height: 0.91;
+    }
+  }
+
+  @include for-desktop {
+    width: 277px;
+    height: 137px;
+    margin-bottom: 25px;
+
+    font-size: 38px;
+    line-height: 1.16;
+
+    &__passion {
+      font-size: 58px;
+      line-height: 0.91;
+    }
+  }
+}
+
+.hero-btns {
+  display: flex;
+
+  &__item {
+    border-radius: 20px;
+    height: 24px;
+
+    transition: background-color;
+    transition-timing-function: $timing-function-main;
+    transition-duration: $duration-main;
+
+    @include for-desktop {
+      height: 40px;
+    }
+
+    &_prod {
+      width: 62px;
+
+      margin-right: 8px;
+
+      background-color: $accent-color;
+
+      @include for-desktop {
+        margin-right: 14px;
+        width: 104px;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: $button-primary-hover;
+      }
+    }
+
+    &_about {
+      width: 83px;
+
+      background-color: $main-light-color;
+
+      @include for-desktop {
+        width: 138px;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: $button-secondary-hover;
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 8px;
+    line-height: 1.25;
+
+    @include for-desktop {
+      font-size: 14px;
+      line-height: 1.29;
+    }
+
+    &_prod {
+      color: $main-light-color;
+    }
+
+    &_about {
+      color: $accent-color;
+    }
+  }
+}
+
+.title-wrap {
+  display: flex;
+}
+
+.infrastructure-wrap {
+  display: none;
+}
+
+.infrastructure-wrap {
+  @include for-tablet {
+    display: flex;
+    flex-direction: column;
+    margin-left: 488px;
+    width: 44px;
+  }
+
+  @include for-desktop {
+    margin-left: 682px;
+    width: 75px;
+  }
+}
+
+.infrastructure-info {
+  position: relative;
+  font-family: Titan One;
+  font-size: 28px;
+  line-height: 1.14;
+  letter-spacing: 0.04em;
+  text-align: right;
+  color: $accent-color;
+
+  @include for-desktop {
+    font-size: 46px;
+    line-height: 1.15;
+  }
+
+  &::after {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: $main-light-color;
+
+    position: absolute;
+    top: -3px;
+    right: -6px;
+    z-index: -1;
+
+    @include for-desktop {
+      width: 30px;
+      height: 30px;
+      top: -6px;
+      right: -15px;
+    }
+  }
+}
+
+.infrastructure-info__bottom {
+  font-size: 8px;
+  line-height: 1.25;
+  color: $main-light-color;
+
+  @include for-desktop {
+    font-size: 14px;
+    line-height: 1.29;
+  }
+}
+
+.infrastructure-info__bottom_margin {
+  margin-bottom: 13px;
+  text-align: right;
+
+  @include for-desktop {
+    margin-bottom: 20px;
+  }
+}

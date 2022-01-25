@@ -1,0 +1,101 @@
+.advantages-section {
+  background: $section-bg-color;
+  padding-bottom: 97px;
+}
+.advantages-list {
+  @include for-tablet {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 40px;
+  }
+  @include for-desktop {
+    margin-right: 0;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding-right: 70px;
+  }
+  &__numer {
+    display: block;
+
+    font-family: 'Titan One', sans-serif;
+    font-size: 36px;
+    line-height: 1.14;
+    letter-spacing: 0.04em;
+    color: $accent-color;
+    @include for-desktop {
+      font-size: 58px;
+      line-height: 1.14;
+    }
+
+    &_mb {
+      margin-bottom: 15px;
+    }
+    &_pseudo_milk::before {
+      content: '';
+      background-image: url(.././images/extra-for-about/milk-x1.png);
+      display: block;
+      width: 33px;
+      height: 50px;
+      margin-bottom: 16px;
+      @include for-tablet {
+        margin-bottom: 36px;
+      }
+      @include for-desktop {
+        margin-bottom: 40px;
+      }
+    }
+    &_pseudo_apple::before {
+      content: '';
+      background-image: url(.././images/extra-for-about/apple-x1.png);
+      display: block;
+      width: 50px;
+      height: 50px;
+      margin-bottom: 16px;
+      @include for-tablet {
+        margin-bottom: 36px;
+      }
+      @include for-desktop {
+        margin-bottom: 40px;
+      }
+    }
+    &_pseudo_heart::before {
+      content: '';
+      background-image: url(.././images/extra-for-about/heart-x1.png);
+      display: block;
+      width: 44px;
+      height: 50px;
+      margin-bottom: 16px;
+      @include for-tablet {
+        margin-bottom: 36px;
+      }
+      @include for-desktop {
+        margin-bottom: 40px;
+      }
+    }
+  }
+  &__text {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.7;
+    color: $main-text-color;
+    @include for-desktop {
+      font-size: 16px;
+      line-height: 1.76;
+      letter-spacing: 0.02em;
+    }
+  }
+  &__item {
+    @include for-tablet {
+      width: calc((100% - 120px) / 3);
+    }
+    @include for-desktop {
+      width: calc((100% - 60px) / 3);
+    }
+    @media screen and (max-width: 767px) {
+      &:not(:last-child) {
+        margin-bottom: 38px;
+      }
+    }
+  }
+}

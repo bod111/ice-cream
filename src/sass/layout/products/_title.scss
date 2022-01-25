@@ -1,0 +1,13 @@
+.section-title_position {
+  margin-top: 15px;
+}
+.section-title__up-text_position {
+  padding-top: 121px;
+
+  @include for-tablet {
+    padding-top: 122px;
+  }
+  @include for-desktop {
+    padding-top: 0px;
+  }
+}
